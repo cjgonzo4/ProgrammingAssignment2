@@ -1,7 +1,6 @@
 ## Programming Assignment #2 
 ## This first function creates a square matrix which 
-## returns a list containing a function to do the following
-## (as in the example to cache mean):
+## returns a list containing functions that do the following):
 ##  1. Set the Matrix
 ##  2. Get the Matrix
 ##  3. Set the Inverse
@@ -21,8 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-## Below Function takes the list as output from makeCacheMatrix and
-## returns its inverse
+## Below Function 'cacheSolve' takes the list output from makeCacheMatrix and
+## returns the inverse of the matrix after checking for cache data
 
 cacheSolve <- function(x, ...) {
 ## Return a matrix which is the inverse of x using cached data if possible
@@ -32,7 +31,7 @@ cacheSolve <- function(x, ...) {
 	return(inv)
 	}
 	matrix.data = x$get()
-  inv = solve(matrix.data, ...)
+  	inv = solve(matrix.data, ...)
 	x$setinv(inv)
 	return(inv)
 }
