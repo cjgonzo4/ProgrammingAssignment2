@@ -10,7 +10,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 	inv = NULL
-    set = function(y) {
+    	set = function(y) {
         x <<- y		## using <<- operator to assign value to an object
 					## different from the current environment
         inv <<- NULL
